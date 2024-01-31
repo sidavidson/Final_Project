@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <nav class="navbar ">
+        <div class="navbar__container">
+            
+            <a class="logo navbar__item" href="#" id="navbar__logo">SILVIYA</a>
+            
+            <a class="navbar__item" href="#" id="contact_link">CONTACT</a>
+        </div>
+        
+    </nav>
+    <div class="body__overlay">
+        <div class="layout">
+            <div class="hero">
+                <div id='circle' data-text="FRONT END WEB DEVELOPER&nbsp;"></div>
+                <p class="hero__text">Hello there, nice to see you here! I'm Silviya, a <strong style="color: white;">Front End Web Developer</strong> & occasional UX/UI designer based in Melbourne, Australia.</p>
+                
+            </div>
+        </div>
+        <div class="layout">
+            <div class="about">
+        
+                 <div class="photo_container">
+
+                      <div class="about__photo">
+                 </div>
+          
+                    
+                </div>
+                <div class="about__text">
+                    As a designer, I enjoy working with an interdisciplinary team, being in constant collaboration with PMs, developers, and stakeholders. I am involved in the entire project lifecycle but, I am most comfortable creating high-fidelity UIs and prototypes. While my work is usually for the web, I also have some experience designing for mobile.
+                </div>
+            </div>      
+        </div>
+        <div class="layout">
+            <h1>RECENT </h1>    
+            <div class="container__projects">
+                <div class="project1"></div>
+                <div class="project2"></div>
+                <div class="project3"></div>
+            </div>
+            <div class="extra_space">
+              <!-- EXTRA SPACE  -->
+            </div>
+        </div>
+            <div class="layout">
+
+                <div id="container-imgs"></div>
+                <div id="container-btn">
+                    <button id="ret">Back</button>
+                    <button id="prox">Next</button>        
+                </div>
+                <div class="extra_space">
+                  <!-- EXTRA SPACE  -->
+                </div>
+                
+            </div>
+
+            <div class="layout form_center">
+              <!-- contact form -->
+              <h5>For any inquiries or questions related to web development services, please don't hesitate to send me a message.</h5>
+              <form id="contact_form">
+                <!-- <label for="email">Email:</label> -->
+                <input type="email" placeholder="Email:" id="email" name="email" required>
+            
+                <!-- <label for="message">Message:</label> -->
+                <textarea id="message" name="message" placeholder="Message:" rows="4" required></textarea>
+            
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo" placeholder="image">
+            
+                <button class="btn_form" type="submit">SEND</button>
+            </form>
+            
+            </div>
+
+
+            <footer>
+                <p class="footer__text"> Made with <span> ☕ </span> and <span> ❤️</span>.</p>
+            </footer>
+        </div>   
+        <!-- end of BODY overlay  -->
+            
+        <script src="styles.js" defer></script>
+
+
+
+        <!--         
+        <script>
+
+document.getElementById('contact_link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contact_form').scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+            
+ const arrImgs = [
+  {
+    url:
+      "./images/project1.png"
+  },
+  {
+    url:
+    "./images/project4.png"
+  },
+  {
+    url:
+    "./images/project3.png"
+  },
+  {
+    url:
+    "./images/project2.png"
+  },
+  
+  
+];
+const containerImgs = document.querySelector("#container-imgs"),
+  prox = document.querySelector("#prox"),
+  ret = document.querySelector("#ret");
+
+window.addEventListener("load", function () {
+  arrImgs.forEach(function (item) {
+    containerImgs.innerHTML += `
+    <div>
+      <img src=${item.url}>
+    </div>`;
+  });
+});
+
+prox.addEventListener("click", function () {
+  containerImgs.scrollBy(300, 0);
+});
+
+ret.addEventListener("click", function () {
+  containerImgs.scrollBy(-150, 0);
+});      
+            
+            const degreeToRadian = (angle) => {
+                return angle * (Math.PI / 180);
+            };
+            
+            const radius = 80;
+            const diameter = radius * 2;
+            
+            const circle = document.querySelector("#circle");
+            circle.style.width = `${diameter}px`;
+            circle.style.height = `${diameter}px`;
+            
+            const text = circle.dataset.text;
+            const characters = text.split("");
+            
+            const deltaAngle = 360 / characters.length;
+            const characterOffsetAngle = 8;
+            let currentAngle = -90;
+            
+            characters.forEach((character, index) => {
+                const span = document.createElement("span");
+                span.innerText = character;
+                const xPos = radius * (1 + Math.cos(degreeToRadian(currentAngle)));
+                const yPos = radius * (1 + Math.sin(degreeToRadian(currentAngle)));
+                
+                const transform = `translate(${xPos}px, ${yPos}px)`;
+                const rotate = `rotate(${(index * deltaAngle) + characterOffsetAngle}deg)`;
+                span.style.transform = `${transform} ${rotate}`;
+                
+                currentAngle += deltaAngle;
+                circle.appendChild(span);
+            });
+                      
+            
+            </script> -->
+
+
+</body>
+</html>

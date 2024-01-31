@@ -1,0 +1,349 @@
+/* GENERAL 🤖🤖🤖*** */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* position: relative; */
+    height: auto;
+    width: auto;
+    color: white;
+    background-image: url(./images/noise.gif);
+ 
+}
+
+.body__overlay {
+    background-color: var(--black);
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 0;
+    z-index: 122;
+
+}
+
+/* COLORS 🍒🥎🍒🥎🍒🥎*** */
+:root {
+    --black: #000000e4; 
+    --accent__main: #13fedb;
+    --accent__text: rgb(198, 196, 196);
+    --test: rgba(255, 221, 0, 0.275);
+    --accent-green: #00FF85;
+
+}
+
+
+@font-face {
+    font-family: 'disket-mono'; 
+    src: url('./fonts/Disket-Mono-Regular.ttf') format('truetype'); 
+}
+
+
+.navbar {
+    /* background-color: var(--test); */
+    height: 80px;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--black)
+}
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 5.5rem;
+}
+.navbar__item {
+
+}
+.navbar__item {
+    text-decoration: none;
+    color: white;
+    font-family: 'disket-mono';
+    font-size: 1.5rem;
+}
+.logo {
+    font-size: 3rem;
+    
+}
+
+/* LAYOUT &  **** */
+.layout {
+    /* background-color: var(--test); */
+
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 0 5.5rem;
+    padding-bottom: 8rem;
+}
+.extra_space {
+  max-width: 100%;
+  height: 20rem;
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SPINNING THINGY  👾👾👾 ************************************/
+#circle {
+    box-sizing: unset;
+    position: relative;
+    border-radius: 100%;
+    padding: 16px;
+       animation: rotate-animation 8s infinite linear;
+
+
+       
+  }
+  
+  #circle span {
+    position: absolute;
+    transform-origin: top left;
+    font-size: 2rem;
+  }
+
+
+  @keyframes rotate-animation {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+  }
+  /* THE END OF THE SPINNING THINGY  ***************************/
+
+
+
+
+  /* TYPOGRAPHY 📝📝📝📝 ****** */
+
+  .hero__text {
+    font-size: 2rem;
+    color: var(--accent__text);
+  }
+
+.hero__accent {
+    color: rgb(0, 136, 255);
+}
+
+h1:after {
+  content: " PROJECTS";
+  color: var(--accent-green); /* Color for the inserted content */
+}
+
+h5{ 
+  font-size: 3rem;
+  color: var(--accent__text);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* ABOUT *****  */
+
+.about {
+    display: flex;
+    flex-direction: row;
+    column-gap: 7rem;
+    
+  }
+
+  .photo_container{
+  
+    width: 5rem;
+    background-color: red;
+    flex: 1;
+    background-image: url(./images/photo_id2.png);
+    background-size: cover;
+    background-position: center;
+  }
+/* about photo is deleted only .photp_container is left  */
+
+.about__text {
+   font-size: 2.5rem;
+   line-height: 1.5;
+   color: var(--accent__text);
+   flex: 2;
+   
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 6rem;
+}
+
+
+
+/* TEXT********************* */
+
+img {
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    display: block;
+  }
+  
+  #container-imgs {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 700px;
+  
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+  
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  #container-imgs > div {
+    width: 45%;
+    height: 200px;
+  
+    flex: none;
+  
+    scroll-snap-align: center;
+  }
+  
+
+  #container-btn {
+    text-align: center;
+  }
+  #container-btn > button {
+    appearance: none;
+  
+    width: 100px;
+    height: 35px;
+  
+    background: #333;
+    border-radius: 5px;
+    border: none;
+  
+    color: #999;
+    font: 18px sans-serif;
+  
+    cursor: pointer;
+  }
+  
+  #container-btn > button:hover {
+    color: var(--accent-green)
+
+  }
+  
+  .navbar__item:hover {
+    color: var(--accent-green)
+  }
+
+
+/****** CONTACT FORM  ***** */
+
+.form_center {
+
+  max-width: 1000rem;
+  display: grid;
+  place-items: center;
+}
+form {
+  background-color: var(--accent__text);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  width: 350px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn_form {
+  background-color: var(--accent-green);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--accent__main);
+} 
+
+
+
+
+  /* ****FOOTER ***** */
+
+  .footer__text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--accent__text);
+  }
+
+
+
+
+
+
+
+  @media only screen and (max-width: 768px) {
+    body {
+        height: auto; /* Remove fixed height for mobile */
+        background-color: #00FF85;
+        width: 100vw;
+    } 
+    .layout {
+      width: 100vw;
+    }
+    .footer__text{
+      /* just a text remove later  */
+      color: #00FF85;
+    }
+    .photo_container{
+      display: none;
+  }
+  h5 {
+    width: auto;
+  }
+  .form_center {
+    width: auto;
+
+  }
+  form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 250px;
+  }
+  
+  }
