@@ -12,12 +12,12 @@ url:
 },
 {
 url:
-"./images/project3small.jpeg"
+"./images/project3small.jpg"
 },
 {
 url:
-"./images/project4small.jpeg"
-},
+"./images/project4small.jpg"
+},    
 {
 url:
 "./images/project2.png"
