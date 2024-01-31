@@ -22,7 +22,12 @@ url:
 url:
 "./images/project2.png"
 },
-
+url:
+"./images/project2.png"
+},
+url:
+"./images/project2.png"
+},
 
 
 ];
