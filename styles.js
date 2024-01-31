@@ -22,12 +22,18 @@ url:
 url:
 "./images/project2.png"
 },
+{
 url:
-"./images/project2.png"
+  "./images/project1.png"
 },
+    {
 url:
-"./images/project2.png"
+  "./images/project1.png"
 },
+    {
+url:
+  "./images/project1.png"
+}
 
 
 ];
