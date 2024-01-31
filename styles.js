@@ -12,25 +12,17 @@ url:
 },
 {
 url:
-"./images/project4.png"
+"./images/project3small.jpeg"
 },
 {
 url:
-"./images/project3.png"
+"./images/project4small.jpeg"
 },
 {
 url:
 "./images/project2.png"
 },
 {
-url:
-  "./images/project1.png"
-},
-    {
-url:
-  "./images/project1.png"
-},
-    {
 url:
   "./images/project1.png"
 }
